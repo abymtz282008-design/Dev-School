@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevSchool</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+      color:#111;
+    }
+
+    header{
+      background:linear-gradient(135deg,#001f4d,#0077ff);
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    header img{
+      width:220px;
+      margin-bottom:20px;
+      background:white;
+      border-radius:20px;
+      padding:10px;
+    }
+
+    header h1{
+      font-size:60px;
+      letter-spacing:3px;
+    }
+
+    header p{
+      margin-top:10px;
+      font-size:20px;
+    }
+
+    nav{
+      background:#001233;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#00b4ff;
+    }
+
+    section{
+      padding:50px 10%;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom:30px;
+    }
+
+    h2{
+      color:#0056d6;
+      margin-bottom:20px;
+    }
+
+    .imagenes{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+      margin-top:20px;
+    }
+
+    .imagenes img{
+      width:250px;
+      border-radius:15px;
+      box-shadow:0 5px 10px rgba(0,0,0,0.2);
+      background:white;
+      padding:15px;
+    }
+
+    ul{
+      margin-left:20px;
+      line-height:2;
+    }
+
+    .facebook{
+      text-align:center;
+      margin-top:20px;
+    }
+
+    .facebook a{
+      background:#1877f2;
+      color:white;
+      padding:15px 25px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .facebook a:hover{
+      background:#0d5fd3;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    input, textarea{
+      padding:15px;
+      border-radius:10px;
+      border:1px solid #ccc;
+      font-size:16px;
+    }
+
+    textarea{
+      resize:none;
+      height:150px;
+    }
+
+    button{
+      background:#0056d6;
+      color:white;
+      padding:15px;
+      border:none;
+      border-radius:10px;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#003d99;
+    }
+
+    footer{
+      background:#001233;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:30px;
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:40px;
+      }
+
+      section{
+        padding:40px 5%;
+      }
+
+      .imagenes img{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <!-- LOGO DEV SCHOOL -->
+    <img src="WhatsApp Image 2026-05-28 at 11.19.33 AM.jpeg" alt="Logo DevSchool">
+
+    <h1>DEVSCHOOL</h1>
+
+    <p>Innovamos hoy, transformamos el futuro</p>
+
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre Nosotros</a>
+    <a href="#objetivo">Objetivo</a>
+    <a href="#conalep">CONALEP</a>
+    <a href="#comentarios">Comentarios</a>
+  </nav>
+
+  <section id="sobre">
+
+    <div class="card">
+
+      <h2>¿Qué es DevSchool?</h2>
+
+      <p>
+        DevSchool es un proyecto escolar creado por estudiantes de Soporte y 
+        Mantenimiento en Equipos de Cómputo enfocado en mejorar los laboratorios 
+        de informática mediante mantenimiento preventivo, organización y optimización tecnológica.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section id="objetivo">
+
+    <div class="card">
+
+      <h2>Nuestros Objetivos</h2>
+
+      <ul>
+        <li>Mejorar el rendimiento de las computadoras.</li>
+        <li>Organizar los laboratorios de informática.</li>
+        <li>Evitar daños y virus en los equipos.</li>
+        <li>Aplicar nuestros conocimientos técnicos.</li>
+        <li>Crear un mejor ambiente para estudiantes y maestros.</li>
+      </ul>
+
+    </div>
+
+  </section>
+
+  <section id="conalep">
+
+    <div class="card">
+
+      <h2>Somos estudiantes del CONALEP Don Victor Gómez Garza</h2>
+
+      <p>
+        Este proyecto fue desarrollado por alumnos comprometidos con la tecnología,
+        la innovación y el mejoramiento de nuestra institución.
+      </p>
+
+      <div class="imagenes">
+
+        <!-- IMÁGENES CONALEP -->
+        <img src="WhatsApp Image 2026-05-28 at 11.33.13 AM.jpeg" alt="CONALEP">
+
+        <img src="CONALEP-Logo.png" alt="CONALEP">
+
+        <img src="WhatsApp Image 2026-05-28 at 11.32.03 AM.jpeg" alt="CONALEP">
+
+      </div>
+
+      <div class="facebook">
+
+        <br><br>
+
+        <a href="https://www.facebook.com/Conalep295/?locale=es_LA" target="_blank">
+          Visitar Facebook del CONALEP
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="comentarios">
+
+    <div class="card">
+
+      <h2>Comentarios</h2>
+
+      <p>
+        Déjanos tu opinión sobre el proyecto DevSchool.
+      </p>
+
+      <br>
+
+      <!-- FORMULARIO -->
+      <form action="mailto:abymtz282008@gmail.com" method="post" enctype="text/plain">
+
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+        <input type="email" name="correo" placeholder="Tu correo" required>
+
+        <textarea name="comentario" placeholder="Escribe tu comentario..." required></textarea>
+
+        <button type="submit">Enviar Comentario</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <p>
+      © 2026 DevSchool | Proyecto escolar tecnológico
+    </p>
+
+  </footer>
+
+</body>
+</html>
