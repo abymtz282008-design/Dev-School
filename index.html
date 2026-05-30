@@ -1,307 +1,485 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DevSchool</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevSchool</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
 
-    body{
-      background:#f4f7fb;
-      color:#111;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-    header{
-      background:linear-gradient(135deg,#001f4d,#0077ff);
-      color:white;
-      text-align:center;
-      padding:40px 20px;
-    }
+body{
+    background:#eef2f7;
+    color:#111;
+}
 
-    header img{
-      width:220px;
-      margin-bottom:20px;
-      background:white;
-      border-radius:20px;
-      padding:10px;
-    }
+
+
+header{
+    background:linear-gradient(135deg,#001f4d,#0077ff);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header img{
+    width:180px;
+    max-width:90%;
+    background:white;
+    padding:10px;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+header h1{
+    font-size:45px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+
+
+nav{
+    background:#001233;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00b4ff;
+}
+
+
+
+section{
+    padding:25px 15px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    margin:auto;
+    margin-bottom:25px;
+    max-width:1000px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#0056d6;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+p{
+    line-height:1.7;
+}
+
+
+
+.imagenes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.imagenes img{
+    width:100%;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+
+
+.facebook{
+    text-align:center;
+    margin-top:30px;
+}
+
+.facebook a{
+    background:#1877f2;
+    color:white;
+    padding:14px 20px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+}
+
+
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:16px;
+    width:100%;
+}
+
+textarea{
+    resize:none;
+    height:140px;
+}
+
+button{
+    background:#0056d6;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+
+
+.rating-container{
+    text-align:center;
+    margin-top:20px;
+}
+
+.emoji-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.emoji-btn{
+    font-size:40px;
+    background:white;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.emoji-btn:hover{
+    transform:scale(1.2);
+}
+
+
+
+.resultados{
+    margin-top:30px;
+}
+
+.barra{
+    margin-bottom:20px;
+}
+
+.barra p{
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.progreso{
+    width:100%;
+    background:#ddd;
+    border-radius:30px;
+    overflow:hidden;
+    height:30px;
+}
+
+.progreso-interno{
+    height:100%;
+    width:0%;
+    text-align:center;
+    line-height:30px;
+    color:white;
+    font-weight:bold;
+    transition:1s;
+}
+
+.feliz{
+    background:#00b894;
+}
+
+.normal{
+    background:#fdcb6e;
+    color:black;
+}
+
+.triste{
+    background:#d63031;
+}
+
+/* FOOTER */
+
+footer{
+    background:#001233;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:20px;
+}
+
+
+
+@media(max-width:600px){
 
     header h1{
-      font-size:60px;
-      letter-spacing:3px;
+        font-size:35px;
     }
 
     header p{
-      margin-top:10px;
-      font-size:20px;
-    }
-
-    nav{
-      background:#001233;
-      padding:15px;
-      text-align:center;
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 15px;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    nav a:hover{
-      color:#00b4ff;
-    }
-
-    section{
-      padding:50px 10%;
+        font-size:16px;
     }
 
     .card{
-      background:white;
-      padding:30px;
-      border-radius:20px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.1);
-      margin-bottom:30px;
+        padding:20px;
     }
 
-    h2{
-      color:#0056d6;
-      margin-bottom:20px;
+    .emoji-btn{
+        font-size:35px;
     }
 
-    .imagenes{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-      margin-top:20px;
-    }
+}
 
-    .imagenes img{
-      width:250px;
-      border-radius:15px;
-      box-shadow:0 5px 10px rgba(0,0,0,0.2);
-      background:white;
-      padding:15px;
-    }
-
-    ul{
-      margin-left:20px;
-      line-height:2;
-    }
-
-    .facebook{
-      text-align:center;
-      margin-top:20px;
-    }
-
-    .facebook a{
-      background:#1877f2;
-      color:white;
-      padding:15px 25px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .facebook a:hover{
-      background:#0d5fd3;
-    }
-
-    form{
-      display:flex;
-      flex-direction:column;
-      gap:15px;
-    }
-
-    input, textarea{
-      padding:15px;
-      border-radius:10px;
-      border:1px solid #ccc;
-      font-size:16px;
-    }
-
-    textarea{
-      resize:none;
-      height:150px;
-    }
-
-    button{
-      background:#0056d6;
-      color:white;
-      padding:15px;
-      border:none;
-      border-radius:10px;
-      font-size:18px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    button:hover{
-      background:#003d99;
-    }
-
-    footer{
-      background:#001233;
-      color:white;
-      text-align:center;
-      padding:25px;
-      margin-top:30px;
-    }
-
-    @media(max-width:768px){
-
-      header h1{
-        font-size:40px;
-      }
-
-      section{
-        padding:40px 5%;
-      }
-
-      .imagenes img{
-        width:100%;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <header>
+<header>
 
-    <!-- LOGO DEV SCHOOL -->
-    <img src="WhatsApp Image 2026-05-28 at 11.19.33 AM.jpeg" alt="Logo DevSchool">
+<img src="WhatsApp Image 2026-05-28 at 11.19.33 AM.jpeg" alt="Logo DevSchool">
 
-    <h1>DEVSCHOOL</h1>
+<h1>DEVSCHOOL</h1>
 
-    <p>Innovamos hoy, transformamos el futuro</p>
+<p>Innovamos hoy, transformamos el futuro</p>
 
-  </header>
+</header>
 
-  <nav>
-    <a href="#sobre">Sobre Nosotros</a>
-    <a href="#objetivo">Objetivo</a>
-    <a href="#conalep">CONALEP</a>
-    <a href="#comentarios">Comentarios</a>
-  </nav>
+<nav>
 
-  <section id="sobre">
+<a href="#sobre">Sobre Nosotros</a>
+<a href="#objetivo">Objetivos</a>
+<a href="#conalep">CONALEP</a>
+<a href="#comentarios">Comentarios</a>
+<a href="#calificacion">Calificación</a>
 
-    <div class="card">
+</nav>
 
-      <h2>¿Qué es DevSchool?</h2>
 
-      <p>
-        DevSchool es un proyecto escolar creado por estudiantes de Soporte y 
-        Mantenimiento en Equipos de Cómputo enfocado en mejorar los laboratorios 
-        de informática mediante mantenimiento preventivo, organización y optimización tecnológica.
-      </p>
+<section id="sobre">
 
-    </div>
+<div class="card">
 
-  </section>
+<h2>¿Qué es DevSchool?</h2>
 
-  <section id="objetivo">
+<p>
+DevSchool es un proyecto escolar creado por estudiantes de Soporte y 
+Mantenimiento en Equipos de Cómputo enfocado en mejorar los laboratorios 
+de informática mediante mantenimiento preventivo, organización y optimización tecnológica.
+</p>
 
-    <div class="card">
+</div>
 
-      <h2>Nuestros Objetivos</h2>
+</section>
 
-      <ul>
-        <li>Mejorar el rendimiento de las computadoras.</li>
-        <li>Organizar los laboratorios de informática.</li>
-        <li>Evitar daños y virus en los equipos.</li>
-        <li>Aplicar nuestros conocimientos técnicos.</li>
-        <li>Crear un mejor ambiente para estudiantes y maestros.</li>
-      </ul>
 
-    </div>
 
-  </section>
+<section id="objetivo">
 
-  <section id="conalep">
+<div class="card">
 
-    <div class="card">
+<h2>Nuestros Objetivos</h2>
 
-      <h2>Somos estudiantes del CONALEP Don Victor Gómez Garza</h2>
+<p>
+• Mejorar el rendimiento de las computadoras.<br><br>
+• Organizar los laboratorios de informática.<br><br>
+• Evitar daños y virus en los equipos.<br><br>
+• Aplicar nuestros conocimientos técnicos.<br><br>
+• Crear un mejor ambiente para estudiantes y maestros.
+</p>
 
-      <p>
-        Este proyecto fue desarrollado por alumnos comprometidos con la tecnología,
-        la innovación y el mejoramiento de nuestra institución.
-      </p>
+</div>
 
-      <div class="imagenes">
+</section>
 
-        <!-- IMÁGENES CONALEP -->
-        <img src="WhatsApp Image 2026-05-28 at 11.33.13 AM.jpeg" alt="CONALEP">
+
+
+<section id="conalep">
+
+<div class="card">
+
+<h2>Somos estudiantes del CONALEP Don Victor Gómez Garza</h2>
+
+<p>
+Este proyecto fue desarrollado por alumnos comprometidos con la tecnología,
+la innovación y el mejoramiento de nuestra institución.
+</p>
+
+<div class="imagenes">
+<img src="WhatsApp Image 2026-05-28 at 11.33.13 AM.jpeg" alt="CONALEP">
 
         <img src="CONALEP-Logo.png" alt="CONALEP">
 
         <img src="WhatsApp Image 2026-05-28 at 11.32.03 AM.jpeg" alt="CONALEP">
 
-      </div>
 
-      <div class="facebook">
+</div>
 
-        <br><br>
+<div class="facebook">
 
-        <a href="https://www.facebook.com/Conalep295/?locale=es_LA" target="_blank">
-          Visitar Facebook del CONALEP
-        </a>
+<a href="https://www.facebook.com/Conalep295/?locale=es_LA" target="_blank">
+Visitar Facebook del CONALEP
+</a>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
-  <section id="comentarios">
 
-    <div class="card">
 
-      <h2>Comentarios</h2>
+<section id="comentarios">
 
-      <p>
-        Déjanos tu opinión sobre el proyecto DevSchool.
-      </p>
+<div class="card">
 
-      <br>
+<h2>Comentarios</h2>
 
-      <!-- FORMULARIO -->
-      <form action="mailto:abymtz282008@gmail.com" method="post" enctype="text/plain">
+<form action="mailto:abymtz282008@gmail.com" method="post" enctype="text/plain">
 
-        <input type="text" name="nombre" placeholder="Tu nombre" required>
+<input type="text" placeholder="Tu nombre" required>
 
-        <input type="email" name="correo" placeholder="Tu correo" required>
+<input type="email" placeholder="Tu correo" required>
 
-        <textarea name="comentario" placeholder="Escribe tu comentario..." required></textarea>
+<textarea placeholder="Escribe tu comentario..." required></textarea>
 
-        <button type="submit">Enviar Comentario</button>
+<button type="submit">Enviar Comentario</button>
 
-      </form>
+</form>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
-  <footer>
 
-    <p>
-      © 2026 DevSchool | Proyecto escolar tecnológico
-    </p>
 
-  </footer>
+<section id="calificacion">
+
+<div class="card">
+
+<h2>¿Qué te pareció el proyecto?</h2>
+
+<div class="rating-container">
+
+<p>Califica el proyecto usando una carita:</p>
+
+<div class="emoji-buttons">
+
+<button class="emoji-btn" onclick="votar('feliz')">😍</button>
+
+<button class="emoji-btn" onclick="votar('normal')">😐</button>
+
+<button class="emoji-btn" onclick="votar('triste')">😕</button>
+
+</div>
+
+<div class="resultados">
+
+<div class="barra">
+
+<p>Les gustó 😍</p>
+
+<div class="progreso">
+<div class="progreso-interno feliz" id="felizBar">0%</div>
+</div>
+
+</div>
+
+<div class="barra">
+
+<p>Más o menos 😐</p>
+
+<div class="progreso">
+<div class="progreso-interno normal" id="normalBar">0%</div>
+</div>
+
+</div>
+
+<div class="barra">
+
+<p>No les gustó 😕</p>
+
+<div class="progreso">
+<div class="progreso-interno triste" id="tristeBar">0%</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 DevSchool | Proyecto escolar tecnológico</p>
+
+</footer>
+
+<script>
+
+let votos = {
+    feliz:0,
+    normal:0,
+    triste:0
+};
+
+function votar(tipo){
+
+    votos[tipo]++;
+
+    let total = votos.feliz + votos.normal + votos.triste;
+
+    let felizPorcentaje = Math.round((votos.feliz / total) * 100);
+    let normalPorcentaje = Math.round((votos.normal / total) * 100);
+    let tristePorcentaje = Math.round((votos.triste / total) * 100);
+
+    document.getElementById("felizBar").style.width = felizPorcentaje + "%";
+    document.getElementById("felizBar").innerHTML = felizPorcentaje + "%";
+
+    document.getElementById("normalBar").style.width = normalPorcentaje + "%";
+    document.getElementById("normalBar").innerHTML = normalPorcentaje + "%";
+
+    document.getElementById("tristeBar").style.width = tristePorcentaje + "%";
+    document.getElementById("tristeBar").innerHTML = tristePorcentaje + "%";
+}
+
+</script>
 
 </body>
 </html>
